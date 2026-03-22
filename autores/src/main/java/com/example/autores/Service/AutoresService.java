@@ -3,10 +3,12 @@ package com.example.autores.Service;
 import com.example.autores.Model.AutoresModel;
 import com.example.autores.Repository.AutoresRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class AutoresService {
 
     @Autowired
@@ -20,7 +22,7 @@ public class AutoresService {
         return autoresRepository.findById(id);
     }
 
-    public AutoresModel criarAutores(AutoresModel autor){
+    public AutoresModel criarAutor(AutoresModel autor){
         return autoresRepository.save(autor);
     }
 
